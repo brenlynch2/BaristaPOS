@@ -6,10 +6,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="327.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#syncLists" onMouseExited="#syncLists" prefHeight="400.0" prefWidth="327.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BaristaPOSOrderHistoryController">
    <children>
-      <Button fx:id="btnViewSelectedTicket" layoutX="14.0" layoutY="323.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="300.0" text="View Selected Ticket" />
+      <Button fx:id="btnViewSelectedTicket" layoutX="14.0" layoutY="323.0" mnemonicParsing="false" onMouseClicked="#btnViewSelectedTicketClicked" prefHeight="73.0" prefWidth="300.0" text="View Selected Ticket" />
       <ListView fx:id="listViewOrderHistoryEntry" layoutX="14.0" layoutY="44.0" prefHeight="273.0" prefWidth="300.0" />
       <Label fx:id="lblSelectTicketToView" layoutX="61.0" layoutY="14.0" text="Select a ticket to view.">
          <font>

@@ -6,13 +6,14 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="752.0" prefWidth="797.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="752.0" prefWidth="797.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BaristaPOSController">
    <children>
-      <Button fx:id="btnOrder" layoutX="416.0" layoutY="540.0" mnemonicParsing="false" prefHeight="205.0" prefWidth="222.0" text="ORDER" textFill="RED">
+      <Button fx:id="btnOrder" layoutX="416.0" layoutY="540.0" mnemonicParsing="false" onMouseClicked="#btnOrderClicked" prefHeight="205.0" prefWidth="222.0" text="ORDER" textFill="RED">
          <font>
             <Font name="System Bold" size="20.0" />
          </font></Button>
-      <ListView fx:id="listViewFood" layoutX="14.0" layoutY="67.0" prefHeight="433.0" prefWidth="250.0" />
+      <ListView fx:id="listViewFood" layoutX="14.0" layoutY="67.0" prefHeight="433.0" prefWidth="250.0">
+      </ListView>
       <ListView fx:id="listViewCoffee" layoutX="271.0" layoutY="67.0" prefHeight="433.0" prefWidth="250.0" />
       <ListView fx:id="listViewCondimentsOther" layoutX="527.0" layoutY="67.0" prefHeight="433.0" prefWidth="250.0" />
       <Label fx:id="lblFood" layoutX="110.0" layoutY="30.0" text="Food">
@@ -36,15 +37,15 @@
             <Font name="Verdana" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="btnAddSelectedToOrder" layoutX="271.0" layoutY="540.0" mnemonicParsing="false" prefHeight="101.0" prefWidth="143.0" text="Add Selected Item(s) to Order" textAlignment="CENTER" wrapText="true" />
-      <Button fx:id="btnRemoveSelectedFromOrder" layoutX="271.0" layoutY="643.0" mnemonicParsing="false" prefHeight="101.0" prefWidth="143.0" text="Remove Selected Item(s) from Order" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="btnAddSelectedToOrder" layoutX="271.0" layoutY="540.0" mnemonicParsing="false" onMouseClicked="#btnAddSelectedToOrderClicked" prefHeight="101.0" prefWidth="143.0" text="Add Selected Item(s) to Order" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="btnRemoveSelectedFromOrder" layoutX="271.0" layoutY="643.0" mnemonicParsing="false" onMouseClicked="#btnRemoveSelectedFromOrderClicked" prefHeight="101.0" prefWidth="143.0" text="Remove Selected Item(s) from Order" textAlignment="CENTER" wrapText="true" />
       <Label fx:id="lblOrderingControls" layoutX="461.0" layoutY="509.0" text="Order Controls">
          <font>
             <Font name="Verdana" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="btnOrderHistory" layoutX="640.0" layoutY="540.0" mnemonicParsing="false" prefHeight="101.0" prefWidth="143.0" text="Order History" textAlignment="CENTER" wrapText="true" />
-      <Button fx:id="btnAdminLogin" layoutX="640.0" layoutY="643.0" mnemonicParsing="false" prefHeight="101.0" prefWidth="143.0" text="Admin Login" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="btnOrderHistory" layoutX="640.0" layoutY="540.0" mnemonicParsing="false" onMouseClicked="#btnOrderHistoryClicked" prefHeight="101.0" prefWidth="143.0" text="Order History" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="btnAdminLogin" layoutX="640.0" layoutY="643.0" mnemonicParsing="false" onMouseClicked="#btnAdminLoginClicked" prefHeight="101.0" prefWidth="143.0" text="Admin Login" textAlignment="CENTER" wrapText="true" />
       <Label fx:id="lblWelcome" layoutX="236.0" layoutY="6.0" text="&quot;Welcome to the Coffee Shop! How may I take your order?&quot;" />
       <Label fx:id="lblTotalPrice" layoutX="170.0" layoutY="512.0" text="Total Price:">
          <font>

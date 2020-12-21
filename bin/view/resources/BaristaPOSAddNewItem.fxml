@@ -2,20 +2,20 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="322.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="322.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BaristaPOSAddNewItemController">
    <children>
       <TextField fx:id="textFieldItemPrice" layoutX="11.0" layoutY="222.0" prefHeight="27.0" prefWidth="300.0" />
       <TextField fx:id="textFieldItemMenuDisplayName" layoutX="11.0" layoutY="159.0" prefHeight="27.0" prefWidth="300.0" />
-      <TextField fx:id="textFieldItemName" layoutX="11.0" layoutY="92.0" prefHeight="27.0" prefWidth="300.0" />
+      <TextField fx:id="textFieldItemName" layoutX="11.0" layoutY="92.0" onKeyTyped="#textFieldItemNameTextChanged" prefHeight="27.0" prefWidth="300.0" />
       <TextField fx:id="textFieldItemType" layoutX="11.0" layoutY="286.0" prefHeight="27.0" prefWidth="300.0" />
-      <Button fx:id="btnCreateNewItem" layoutX="11.0" layoutY="323.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="300.0" text="Create New Item" />
+      <Button fx:id="btnCreateNewItem" layoutX="11.0" layoutY="323.0" mnemonicParsing="false" onMouseClicked="#btnCreateNewItemClicked" prefHeight="73.0" prefWidth="300.0" text="Create New Item" />
       <Label fx:id="lblItemName" layoutX="14.0" layoutY="69.0" text="Item Name" />
       <Label fx:id="lblItemMenuDisplayName" layoutX="14.0" layoutY="136.0" text="Item Menu Display Name" />
       <Label fx:id="lblItemPrice" layoutX="14.0" layoutY="200.0" text="Item Price" />
@@ -35,6 +35,6 @@
             </Label>
          </children>
       </HBox>
-      <ToggleButton fx:id="tglBtnSameAsItemName" layoutX="164.0" layoutY="131.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="147.0" text="Same as Item Name" />
+      <CheckBox fx:id="checkBoxSameAsItemName" layoutX="179.0" layoutY="136.0" mnemonicParsing="false" onMouseClicked="#checkBoxSameAsItemNameClicked" text="Same as Item Name" />
    </children>
 </Pane>

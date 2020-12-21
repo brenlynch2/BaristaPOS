@@ -49,5 +49,8 @@ public class OrderTicket implements Serializable{
 	public void setTicketID(int ticketID) {
 		this.ticketID = ticketID;
 	}
-	
+	@Override
+	public String toString() {
+		return "Ticket ID #: " + ticketID;
+	}
 }

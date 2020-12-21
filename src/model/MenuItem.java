@@ -18,7 +18,7 @@ public class MenuItem implements Item,Serializable {
 	 * @param name The name of the item.
 	 * @param menuName The text that will be displayed when the MenuItem is placed in a ListView.
 	 * @param price The price of the item.
-	 * @param type The type of the item. This is an int value from 1 to 4.
+	 * @param type The type of the item. This is an int value from 1 to 4. 1 = Food, 2 = Coffee, 3 = Condiment, 4 = Other.
 	 */
 	public MenuItem(String name, String menuName, double price, int type) {
 		this.name = name;
@@ -26,32 +26,40 @@ public class MenuItem implements Item,Serializable {
 		this.price = price;
 		this.type = type;
 	}
+	@Override
 	public String getName() {
 		return name;
 	}
+	@Override
 	public void setName(String name) {
 		this.name = name;
 	}
+	@Override
 	public String getMenuName() {
 		return menuName;
 	}
 
+	@Override
 	public void setMenuName(String menuName) {
 		this.menuName = menuName;
 	}
 
+	@Override
 	public double getPrice() {
 		return price;
 	}
 
+	@Override
 	public void setPrice(double price) {
 		this.price = price;
 	}
 
+	@Override
 	public int getType() {
 		return type;
 	}
 
+	@Override
 	public void setType(int type) {
 		this.type = type;
 	}

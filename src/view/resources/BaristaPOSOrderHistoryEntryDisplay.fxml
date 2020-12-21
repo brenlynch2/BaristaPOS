@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="627.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnViewDataClicked" onMouseDragged="#btnViewDataClicked" onMouseEntered="#btnViewDataClicked" onMouseExited="#btnViewDataClicked" prefHeight="240.0" prefWidth="627.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BaristaPOSOrderHistoryEntryDisplayController">
    <children>
       <ListView fx:id="listViewItemsOrdered" layoutX="14.0" layoutY="31.0" prefHeight="198.0" prefWidth="300.0" />
       <Label fx:id="lblItemsOrdered" layoutX="113.0" layoutY="7.0" text="Items Ordered">
@@ -15,13 +14,13 @@
             <Font name="Verdana" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="btnClose" layoutX="326.0" layoutY="102.0" mnemonicParsing="false" prefHeight="127.0" prefWidth="287.0" text="Close" />
+      <Button fx:id="btnClose" layoutX="326.0" layoutY="102.0" mnemonicParsing="false" onMouseClicked="#btnCloseClicked" prefHeight="127.0" prefWidth="138.0" text="Close" />
       <Label fx:id="lblInformationForTicketNumber" layoutX="326.0" layoutY="7.0" text="Information for Ticket #:">
          <font>
             <Font name="Verdana" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="lblTicketID" layoutX="509.0" layoutY="8.0" text="ticket_ID" />
+      <Label fx:id="lblTicketIDField" layoutX="509.0" layoutY="8.0" text="ticket_ID" />
       <Label fx:id="lblTotalPrice" layoutX="326.0" layoutY="37.0" text="Total Price:">
          <font>
             <Font name="Verdana" size="14.0" />
@@ -34,5 +33,6 @@
          </font>
       </Label>
       <Label fx:id="lblTimestampEntryField" layoutX="421.0" layoutY="73.0" text="timestamp_entry" />
+      <Button fx:id="btnViewData" layoutX="475.0" layoutY="102.0" mnemonicParsing="false" onMouseClicked="#btnViewDataClicked" prefHeight="127.0" prefWidth="138.0" text="View Data" />
    </children>
 </Pane>

@@ -10,12 +10,22 @@ import java.util.LinkedList;
 public class BackupContainer implements Serializable {
 	private static final long serialVersionUID = -1415931987564401155L;
 	private LinkedList<Object> internalContainer;
+	private String adminPassword;
 	
+	/** Creates a new BackupContainer object.
+	 * 
+	 *	@param adminPassword The current Administrator login password associated with a specific instance of the application.
+	 */
+	public BackupContainer(String adminPassword) {
+		this.internalContainer = new LinkedList<Object>();
+		this.adminPassword = adminPassword;
+	}
 	/** Creates a new BackupContainer object.
 	 * 
 	 */
 	public BackupContainer() {
 		this.internalContainer = new LinkedList<Object>();
+		this.adminPassword = "password";
 	}
 	/** Adds a new item to the container.
 	 * 
@@ -23,8 +33,8 @@ public class BackupContainer implements Serializable {
 	 * @param index The location in the container at which inputItem will be placed.
 	 * 
 	 */
-	public void addItem(Object inputItem, int index) {
-		internalContainer.add(index, inputItem);
+	public void addItem(Object inputItem) {
+		internalContainer.add(inputItem);
 	}
 	/** Gets an item from the container at a specified index, if it exists.
 	 * 
@@ -49,6 +59,12 @@ public class BackupContainer implements Serializable {
 	 * 
 	 * @return an int value reflecting the size of the container.
 	 */
+	public String getAdminPassword() {
+		return adminPassword;
+	}
+	public void setAdminPassword(String newPassword) {
+		this.adminPassword = newPassword;
+	}
 	public int size() {
 		return internalContainer.size();
 	}
