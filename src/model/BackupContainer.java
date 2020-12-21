@@ -30,7 +30,6 @@ public class BackupContainer implements Serializable {
 	/** Adds a new item to the container.
 	 * 
 	 * @param inputItem The Object to be added to the container.
-	 * @param index The location in the container at which inputItem will be placed.
 	 * 
 	 */
 	public void addItem(Object inputItem) {

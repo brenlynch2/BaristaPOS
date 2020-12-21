@@ -59,6 +59,7 @@ public class BaristaPOSController {
 	
 	public void initialize() {
 		syncLists();
+		lblTotalPriceField.setText("0.0");
 	}
 	public void syncLists() {
 		if(GUI.loadedMenuItemContainer != new MenuItemContainer()) {
@@ -155,6 +156,7 @@ public class BaristaPOSController {
 			GUI.loadedOrderTicketContainer.addItem(returnedTicket);
 			driverListlistViewCurrentOrderTotals.clear();
 			listViewCurrentOrderTotals.getItems().clear();
+			lblTotalPriceField.setText("0.0");
 			Alert infoDialog = new Alert(AlertType.INFORMATION, "This order has been placed. Order ID: " + ticketID, ButtonType.OK);
 			infoDialog.showAndWait();
 		}
