@@ -90,8 +90,9 @@ public class BaristaPOSController {
 			listViewCondimentsOther.getItems().clear();
 			listViewCondimentsOther.getItems().addAll(driverListlistViewCondimentsOther);
 		}
+		
+		listViewCurrentOrderTotals.getItems().clear();
 		if(!driverListlistViewCurrentOrderTotals.isEmpty()) {
-			listViewCurrentOrderTotals.getItems().clear();
 			listViewCurrentOrderTotals.getItems().addAll(driverListlistViewCurrentOrderTotals);
 		}
 	}
